@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>삼항연산자</title>
+    </head>
+    <body>
+        <script>
+            let num = 0;
+
+            if (num > 4) {
+                console.log("1", "참");
+            } else {
+                console.log("2", "거짓");
+            }
+
+            num > 4 ? console.log("참") : console.log("거짓");
+            num > 4
+                ? console.log("참")
+                : num < 2
+                ? console.log("참")
+                : console.log("거짓");
+
+            // 아무것도 실행이 되지 않는다.
+            num > 4 && console.log("참");
+
+            num && console.log("참");
+        </script>
+    </body>
+</html>

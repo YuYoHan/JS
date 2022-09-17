@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let name = prompt("이름을 입력하세요");
+            let kor = Number(prompt("국어 점수"));
+            let math = Number(prompt("수학 점수"));
+            let eng = Number(prompt("영어 점수"));
+            let tam = Number(prompt("탐구 점수"));
+
+            let avg = (kor + math + eng + tam) / 4;
+
+            if (avg >= 90) {
+                alert("A학점");
+            } else if (avg >= 80) {
+                alert("B학점");
+            } else if (avg >= 70) {
+                alert("C학점");
+            } else if (avg >= 60) {
+                alert("D학점");
+            } else {
+                alert("F학점");
+            }
+
+            document.write("이름 : " + name + "<br>");
+            document.write("국어점수 : " + kor + "<br>");
+            document.write("수학점수 : " + math + "<br>");
+            document.write("영어점수 : " + eng + "<br>");
+            document.write("탐구점수 : " + tam + "<br>");
+            document.write("평균 : " + avg + "<br>");
+        </script>
+    </body>
+</html>
