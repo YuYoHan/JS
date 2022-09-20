@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>빠른for문</title>
+    </head>
+    <body>
+        <script>
+            // 반복문
+            let arData = [10, 20, 30, 40, 50];
+
+            console.log(arData);
+
+            for (let i in arData) {
+                // key값만 가져온다.
+                console.log("1. ", i);
+                console.log("2. ", arData[i]);
+            }
+
+            // 반복문이 아니다. 프로퍼티를 생성해줬다.
+            let myCar = { brand: "Farrari", color: "Red" };
+
+            for (let i in myCar) {
+                console.log("3. ", i);
+                console.log("4. ", myCar[i]);
+            }
+
+            for (let data of arData) {
+                console.log("5. ", data);
+            }
+            //  ↓ 이렇게하면 에러가 뜬다 myCar은 반복자가 아니기 때문이다.
+            // for (let car of myCar) {
+            //     console.log("6. ", car);
+            // }
+
+            function myFunc(item) {
+                console.log(item);
+            }
+
+            const arr = ["apple", "kiwi", "grape", "orange"];
+            // forEach인자로 함수를 넣어주면 배열의 모든 요소를 순회할 때
+            // 함수의 인자로 요소를 전달한다. 그렇기 때문에 각요소가 출력이 된다.
+            arr.forEach(myFunc);
+
+            arr.forEach((item) => {
+                console.log(item);
+            });
+
+            // index와 item 정보를 전부 가져온다.
+            /*
+                출력:
+                index : 0, item: apple
+                ...
+            */
+            arr.arData((item, index) => {
+                console.log("index: " + index + ", item: " + item);
+            });
+        </script>
+    </body>
+</html>
