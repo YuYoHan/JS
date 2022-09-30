@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let num1 = 100;
+
+            function f1() {
+                let num2 = 100;
+                console.log(num1);
+                console.log(num2);
+            }
+            // 100
+            // 100
+            f1();
+            // ReferenceError
+            // console.log(num2);
+
+            function f2() {
+                let num1 = 200;
+                // 200, 블록 내에서 우선순위는 지역변수
+                console.log(num1);
+            }
+            f2();
+
+            function f3() {
+                num1 = 250;
+            }
+            console.log(num1);
+            f3();
+            console.log(num1);
+        </script>
+    </body>
+</html>
