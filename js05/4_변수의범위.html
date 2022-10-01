@@ -29,10 +29,13 @@
             f2();
 
             function f3() {
+                // 블록에서 (함수)에서 전역의 값을 변경하면 전역 변수는 변경
                 num1 = 250;
             }
+            // 100
             console.log(num1);
             f3();
+            // 250
             console.log(num1);
         </script>
     </body>
