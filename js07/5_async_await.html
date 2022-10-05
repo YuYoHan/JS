@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>async</title>
+    </head>
+    <body>
+        <script>
+            // 3. 5를 받는다.
+            const callback = (number) =>
+                new Promise((resolve, reject) => {
+                    setTimeout(() => {
+                        number = number + 1;
+                        // 5. 위에서 5 + 1해서  3초 후 6이 나온다.
+                        console.log(number);
+                        // 6. 성공했을 때 return해줌 3초 후 6 이 return
+                        resolve(number);
+                    }, 3000);
+                });
+
+            // const asynEx = async (number) => {
+            //     try {
+            //         // 1. number 5를 받아와서 5가 찍힌다.
+            //         console.log(a);
+            //         // 2. callback으로 5를 넘겨준다.
+            //         // 7. resolve에서 6을 then으로 받고 콘솔로 찍어줌
+            //         callback(a).then((result) => console.log(result));
+            //         // 4. 5 + 2 = 7이 찍힘
+            //         console.log(a + 2);
+            //     } catch (error) {
+            //         console.log(err);
+            //     }
+            // };
+            /*
+                콘솔 :
+                    5
+                    7
+                    6
+                    6
+            */
+            const asynEx = async (number) => {
+                try {
+                    console.log(number);
+                    // await가 위에서 실행하는 비동기를 기다렸다가 아래께 실행한다.
+                    await callback(number);
+                    console.log(number + 2);
+                } catch (error) {
+                    console.log(err);
+                }
+            };
+
+            /*
+                콘솔값
+                5
+                6
+                7
+            */
+            let a = 5;
+            asynEx(a);
+        </script>
+    </body>
+</html>

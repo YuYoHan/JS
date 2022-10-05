@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>promise</title>
+    </head>
+    <body>
+        <script>
+            // 비동기 흐름 뒤에 써야만 하는 로직
+            // 내부 함수는 중요하지 않다.
+            const callback = (number) => {
+                setTimeout(() => {
+                    number = number + 1;
+                    console.log(number); // 7
+                }, 1000);
+                return number;
+            };
+
+            let a = 5;
+            // pr이라는 상수를 만들고 Promise라는 객체를 담아주었고
+            // 성공했을때와 실패했을 때 이 두가지 값을 리턴받는다.
+            const pr = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    a = a + 1;
+                    // 1. resolve는 성공상태이고 reject는 실패상태이다.
+                    // 만약에 if문을 setTimeout 밖에 있다면 실패가 뜬다.
+                    // 그 이유는 setTimeout은 비동기 이기 때문에
+                    // 따로 빼서 이벤트루프로 보내주고 이벤트 큐에 넣어주는데
+                    // 큐는 FIFO(선입선출)이다. 그렇기때문에 따로 있으면
+                    // if문이 먼저 실행이 되서 실패한다.
+                    if (a === 6) {
+                        resolve(a); // 6
+                    } else {
+                        reject("실패");
+                    }
+                }, 1000);
+            });
+
+            // 위에 있는 Promise 값을 then과 catch를 통해서 받아올 수 있다.
+            pr.then((result) => {
+                console.log(result); // 6
+                return callback(result); // 7
+                // reject(실패)를 받아온다.
+            }).catch((err) => {
+                console.error(err); // 실패
+            });
+        </script>
+    </body>
+</html>
