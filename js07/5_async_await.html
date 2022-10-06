@@ -40,12 +40,18 @@
                     6
                     6
             */
+
+            // await을 활용함으로써
+            // 비동기를 동기적 흐름으로 만들어주고
+            // 콜백이나 then이 없어도 해당 비동기 함수 실행 후
+            // 다음 함수를 실행시킬 수 있다.
             const asynEx = async (number) => {
                 try {
                     console.log(number);
                     // await가 위에서 실행하는 비동기를 기다렸다가 아래께 실행한다.
-                    await callback(number);
-                    console.log(number + 2);
+                    // 비동기 → 동기처럼 실행하는 것이다.
+                    let result = await callback(number);
+                    console.log(result);
                 } catch (error) {
                     console.log(err);
                 }
