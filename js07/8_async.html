@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // function 앞에 async를 붙여줍니다.
+            // promise 객체 앞에 await를 붙여줍니다.
+            // async가 붙은 함수는 promise 객체를 반환합니다. 따라서 .then((a) => {})를 이용할 수 있다.
+            function delay() {
+                return new Promise((resolve) => {
+                    setTimeout(() => resolve(), 1000);
+                });
+            }
+
+            async function getApple() {
+                await delay();
+                return "apple";
+            }
+            async function getBanana() {
+                await delay();
+                return "banana";
+            }
+
+            function getFruites() {
+                // 리턴값이 promise의 resolve()이므로 then가능
+                getApple().then((a) => {
+                    getBanana().then((b) => console.log(`${a} and ${b}`));
+                });
+            }
+
+            getFruites();
+        </script>
+    </body>
+</html>
