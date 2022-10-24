@@ -23,10 +23,12 @@
             // 함수정의(constructor)가 평가되어 함수 객체를 생성하는 시점에 프로토타입도 생성된다.
             console.log(Person.prototype);
 
+            // 화살표 함수는 non-constructor다.
             const Person2 = (name) => {
                 this.name = name;
             };
 
+            // non-constructor는 프로토타입이 생성되지 않는다.
             console.log(Person2.prototype);
         </script>
     </body>
