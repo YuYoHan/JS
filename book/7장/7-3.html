@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let x = 1;
+            let y = 1;
+
+            // ++연산자는 피연산자의 값을 변경하는 암묵적 할당이 이루어진다.
+            x++;
+            ++y;
+            console.log(x); // 2
+            console.log(y); // 2
+
+            x--;
+            console.log(x); // 1
+
+            let a = 5,
+                result;
+
+            result = a++;
+            console.log(result, a); // 5 6
+
+            result = ++a;
+            console.log(result, a); // 7 7 ← 7 7인 이유는 result는 선증가 후 할당이기 때문에 6 + 1 = 7이고
+            // a도 6 + 1 =7 이라서 7 7이 나온다.
+
+            result = a--;
+            console.log(result, a); // 7 6
+
+            result = --a;
+            console.log(result, a); // 5 5
+        </script>
+    </body>
+</html>
