@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            const arr1 = new Array();
+            const arr2 = [1, 2];
+
+            const str = ["♡", "♥"];
+            console.log(str);
+            console.log(str.length);
+            console.log(str[0]);
+            console.log(str[str.length - 1]);
+
+            for (let i = 0; i < str.length; i++) {
+                console.log(str[i]);
+            }
+
+            for (let heart of str) {
+                console.log(heart);
+            }
+
+            str.forEach(function (str) {
+                console.log(str);
+            });
+
+            str.push("♧", "♣");
+            console.log(str);
+
+            str.pop();
+            str.pop();
+            console.log(str);
+
+            str.unshift("♧", "♣");
+            console.log(str);
+
+            str.shift();
+            console.log(str);
+        </script>
+    </body>
+</html>
