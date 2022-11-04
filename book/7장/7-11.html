@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let x = 2;
+
+            // 2 % 2는 0이고 0은 false로 암묵적 타입 변환된다.
+            let result = x % 2 ? "홀수" : "짝수";
+            console.log(result); // 짝수
+
+            // 위의 삼항연산자를 if문으로 표현할 수 있다.
+            let y = 2,
+                result2;
+            if (y % 2) {
+                result2 = "홀수";
+            } else {
+                result2 = "짝수";
+            }
+            console.log(result2);
+        </script>
+    </body>
+</html>
