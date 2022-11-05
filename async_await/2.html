@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            function delay(ms) {
+                return new Promise((resolve) => setTimeout(resolve, ms));
+            }
+
+            let izone = [
+                "채원",
+                "민주",
+                "유리",
+                "원영",
+                "유진",
+                "예나",
+                "은비",
+                "채영",
+                "나코",
+                "히토미",
+                "혜원",
+            ];
+
+            // async을 사용하면 promise를 사용하지 않아도 바꿔준다.
+            async function izone_member() {
+                await delay(1000);
+                let member = izone.join(", ");
+                return member;
+            }
+
+            async function love() {
+                await delay(1000);
+                return "♥";
+            }
+
+            async function onMe() {
+                // 밑에와 같은 방법은 병렬실행이라는 것이다.
+                // 병렬 실행을 하지 않으면 위에서 delay를 준것들이 1, 1초 합쳐서 2초를 기다려야 하는데
+                // 병렬 실행을 하면 1초면 같이 나온다.
+                const izpromise = izone_member();
+                const lvpromise = love();
+                const iz = await izpromise;
+                const lv = await lvpromise;
+
+                return `${iz}들은 ${lv}이다.`;
+            }
+            onMe().then(console.log);
+        </script>
+    </body>
+</html>
