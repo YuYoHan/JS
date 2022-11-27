@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            const person = {
+                // 데이터 프로퍼티
+                firstName: "Ungi",
+                lastName: "Lee",
+
+                // fullName은 접근자 함수로 구성된 접근자 프로퍼티다.
+                get fullName() {
+                    return `${(this.firstName, this.lastName)}`;
+                },
+
+                set fullName(name) {
+                    // 배열 디스트럭처링 할당
+                    [this.firstName, this.lastName] = name.split(" ");
+                },
+            };
+        </script>
+    </body>
+</html>
