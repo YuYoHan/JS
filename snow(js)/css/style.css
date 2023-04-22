@@ -1,0 +1,65 @@
+body {
+    height: 100vh;
+    /*  radial-gradient : 원형 그라디에선
+        ellipse at bottom : 중심에서 아래쪽이 원형의 중심이 되어라(중심에서 아래쪽이 원형 그라디에션의 시작위치가 되어라)
+        #1b2735 0% : 시작위치의 색상값
+        #090a0f 100% : 종료위치의 색상값 */
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    overflow: hidden;
+}
+
+.snow {
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    opacity: 0;
+    border-radius: 50%;
+    /*  linear  : 균일하게
+        infinite: 무제한*/
+    animation: snow 10s linear infinite;
+}
+
+/*  2의 배수에 해당하는 눈 */
+.snow:nth-of-type(2n) {
+    width: 7px;
+    height: 7px;
+    animation-duration: 7s;
+    animation-delay: 1s;
+}
+.snow:nth-of-type(2n + 1) {
+    animation-duration: 8s;
+    animation-delay: 2s;
+}
+.snow:nth-of-type(9n) {
+    animation-duration: 9s;
+    animation-delay: 3s;
+}
+
+@keyframes snow {
+    0% {
+        /*완전히 투명*/
+        opacity: 0;
+        transform: translateY(0);
+    }
+    20% {
+        opacity: 1;
+        transform: translate(-15px, 20vh);
+    }
+    40% {
+        opacity: 1;
+        transform: translate(15px, 40vh);
+    }
+    60% {
+        opacity: 1;
+        transform: translate(-15px, 60vh);
+    }
+    80% {
+        opacity: 1;
+        transform: translate(0, 80vh);
+    }
+    100% {
+        /*완전히 불투명*/
+        opacity: 1;
+        transform: translateY(100vh);
+    }
+}

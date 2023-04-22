@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>callback</title>
+    </head>
+    <body>
+        <script>
+            function first(파라미터) {
+                // 3. 콘솔로그 실행
+                console.log(1);
+                // 4. 파라미터에 들어온 second함수가 여기서 실행
+                파라미터();
+            }
+
+            function second() {
+                console.log(2);
+            }
+
+            // 1. first를 실행해주세요
+            // 2. 파라미터 자리에 second함수를 넣어주세요
+            first(second);
+        </script>
+    </body>
+</html>

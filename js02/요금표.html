@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <style>
+        table {
+            margin: 0 auto;
+            width: 500px;
+            margin-bottom: 20px;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        th,
+        td {
+            box-sizing: border-box;
+            padding: 5px 0;
+            border: 2px inset #ef9a9a;
+            font-weight: 600px;
+            width: 250px;
+        }
+        caption {
+            color: #fff;
+            font-weight: bold;
+            text-shadow: 3px 3px 2px orange;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        fieldset {
+            width: 30%;
+            margin: 0 auto;
+            text-align: center;
+            border-radius: 5px;
+            border-color: #ce93d8;
+        }
+        input {
+            border-radius: 3px;
+            padding: 5px;
+        }
+        input[type="text"] {
+            border-color: #3949ab;
+        }
+        button {
+            appearance: none;
+            padding: 5px;
+            border: 2px solid #c5cae9;
+            border-radius: 3px;
+            background-color: #9fa8da;
+            color: #fff;
+        }
+    </style>
+    <body>
+        <table border="1">
+            <caption>
+                요금표
+            </caption>
+            <thead>
+                <tr>
+                    <th>구분</th>
+                    <th>요금</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="kid">
+                    <td id="kid-text">아동</td>
+                    <td>무료</td>
+                </tr>
+                <tr id="teen">
+                    <td id="teen-text">청소년</td>
+                    <td>2,000</td>
+                </tr>
+                <tr id="adult">
+                    <td id="adult-text">성인</td>
+                    <td>5,000</td>
+                </tr>
+            </tbody>
+        </table>
+        <!--fieldset : 입력들을 하나의 구역으로 만듬-->
+        <fieldset>
+            <legend>구분</legend>
+            <input type="text" id="input" />
+            <button onclick="confirm();">확인</button>
+        </fieldset>
+        <script>
+            let inputTag = document.getElementById("input");
+            let arId = ["kid", "teen", "adult"];
+            let arAge = ["아동", "청소년", "성인"];
+
+            function confirm() {
+                let age = inputTag.value;
+
+                for (let i = 0; i < 3; i++) {
+                    let tdTag = document.getElementById(arId[i] + "-text");
+                    if (age === arAge[i]) {
+                        if (tdTag.innerHTML == "★" + age) {
+                            continue;
+                        } else {
+                            document.getElementById(arId[i]).style.background =
+                                "#ef9a9a";
+                            tdTag.innerHTML = "★" + tdTag.innerHTML;
+                        }
+                    } else {
+                        document.getElementById(arId[i]).style.background =
+                            "#fff";
+                        tdTag.innerHTML = tdTag.innerHTML.replace("★", "");
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

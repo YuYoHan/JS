@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            function Car(brand, color, price) {
+                this.brand = brand;
+                this.color = color;
+                this.price = price;
+
+                this.engineStart = () => {
+                    console.log(this.brand + " 시동켜기");
+                };
+            }
+
+            const mycar = new Car("Ferrari", "Red", 65000);
+            const momcar = new Car("K7", "White", 4000);
+
+            mycar.engineStart();
+            momcar.engineStart();
+
+            for (let key in mycar) {
+                console.log(`${key} : ${mycar[key]}`);
+            }
+
+            mycar.pw = "abcd";
+            console.log(mycar);
+        </script>
+    </body>
+</html>

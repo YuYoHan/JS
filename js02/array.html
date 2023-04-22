@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>array</title>
+    </head>
+    <body>
+        <script>
+            let arData = [];
+            arData[0] = 1;
+            arData[2] = 3;
+            arData[7] = 7;
+
+            console.dir(arData);
+            console.log(arData[0]);
+            console.log(arData[1]);
+
+            let arData2 = [];
+
+            // 배열 뒤에서 추가
+            arData2.push(10);
+            arData2.push(20);
+            arData2.push(30);
+            arData2.push(40);
+            arData2.push(50);
+
+            console.log(arData2);
+
+            // 배열의 마지막꺼 삭제
+            arData2.pop();
+            console.log(arData2);
+
+            // 배열의 첫번째 삭제
+            arData2.shift();
+            console.log(arData2);
+            // 배열의 길이
+            console.log(arData2.length);
+        </script>
+    </body>
+</html>

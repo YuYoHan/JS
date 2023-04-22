@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>함수</title>
+    </head>
+    <body>
+        <script>
+            function print(number) {
+                console.log(number);
+            }
+
+            print(5);
+
+            // 함수의 결과값을 예측하기 위해서 첫번째로 해야할 것은 input, output
+            // input을 활용하여 output이 되기 위한 기능을 설계 = 자료구죠, 알고리즘
+
+            function printNumberFive(number) {
+                if (number !== 5) return;
+                console.log(number);
+            }
+            printNumberFive(4);
+            printNumberFive(5);
+
+            function sum(seong, yong) {
+                return seong + yong;
+            }
+
+            sum(4, 5);
+        </script>
+    </body>
+</html>

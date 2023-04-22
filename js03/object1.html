@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let brand = "k7";
+            const mycar = {
+                brand: "Ferrari",
+                color: "Red",
+                price: 65000,
+                engineStart: function () {
+                    console.log(this.brand + "시동켜기");
+                },
+            };
+            console.log(mycar);
+            console.log(typeof mycar);
+            console.log(mycar.brand);
+            mycar.engineStart();
+        </script>
+    </body>
+</html>

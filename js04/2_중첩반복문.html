@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>중첩반복문</title>
+    </head>
+    <body>
+        <script>
+            // 중첩 반복문 for문 안의 for문
+            // 구구단(2단 ~ 9단)
+            for (let i = 2; i < 10; i++) {
+                for (let j = 1; j < 10; j++) {
+                    console.log(`${i} x ${j} = ${i * j}`);
+                }
+            }
+
+            let num = 0;
+            let num2 = 30;
+
+            if (num <= 50) {
+                for (let i = 1; i < num2; i++) {
+                    num = num + i;
+                    console.log(`내가 고른 숫자 합계 ${num}`);
+                }
+            }
+        </script>
+        a
+    </body>
+</html>

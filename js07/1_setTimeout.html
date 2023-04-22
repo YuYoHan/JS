@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>setTimeout</title>
+    </head>
+    <body>
+        <div id="select">저를 선택해주세요</div>
+        <button onclick="stopSetTime()">셋타임 취소</button>
+        <button onclick="stopSetInterval()">셋인터벌 취소</button>
+        <button onclick="reSetTime()">다시시작</button>
+
+        <script>
+            const select = document.getElementById("select");
+            console.log(select);
+
+            function selectPrint() {
+                console.log(select.innerText);
+                // select.style.backgroundColor = "red";
+            }
+
+            const setTimePrint = setTimeout(selectPrint, 3000);
+            // 콘솔이 3초마다 계속 찍힘
+            let setIntervalPrint = setInterval(selectPrint, 3000);
+
+            function stopSetTime() {
+                clearTimeout(setTimePrint);
+            }
+            function stopSetInterval() {
+                clearInterval(setIntervalPrint);
+            }
+
+            function reSetTime() {
+                setInervalPrint = setInterval(selectPrint, 3000);
+            }
+        </script>
+    </body>
+</html>

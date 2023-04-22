@@ -1,0 +1,297 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&family=Uchen&display=swap");
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+*,
+::before,
+::after {
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+    letter-spacing: 0px;
+    /*  이 속성을 적용하면 브라우저에 표현되는 텍스트가 렌더링될 때 부드럽게 표현되는 장점이 있습니다.
+        즉, 폰트를 부드럽게 사용하기 위해서 사용하는 스타일 속성이다. 
+        -webkit-font-smoothing
+        1. auto
+        2. antialiased
+        3. none
+        일반적으로 두 번째 값 antialiased를 사용합니다. auto 역시 사용할 수 있으니 텍스트 효과를 브라우저가 결정하게 됩니다.
+    */
+    -webkit-font-smoothing: antialiased;
+    /*  overflow-anchor CSS의 특성을 조정 스크롤 위치가 내용의 변화를 
+        최소화하기 위해 브라우저의 스크롤 고정 행동을 거부 할 수있는 방법을 제공합니다.
+        스크롤 고정 동작은 이를 지원하는 모든 브라우저에서 기본적으로 활성화됩니다.
+        따라서 이 속성의 값을 변경하는 것은 일반적으로 문서 또는 문서의 일부에서 스크롤 고정 문제가 발생하고 
+        동작을 해제해야하는 경우에만 필요합니다. */
+    overflow-anchor: none;
+}
+header {
+    z-index: auto;
+}
+div {
+    display: block;
+}
+form {
+    display: block;
+    margin-top: 0em;
+}
+a,
+a:active,
+a:hover,
+a:link,
+a:visited {
+    text-decoration: none;
+}
+fieldset,
+img {
+    border: 0 none;
+    vertical-align: middle;
+}
+img {
+    border-width: 0;
+    vertical-align: middle;
+    border: 0;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    /*  부모의 baseline에 맞추어 해당 엘리먼트의 baseline 을 정렬합니다*/
+    vertical-align: baseline;
+}
+legend {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    font-size: 0;
+    line-height: 0;
+}
+legend,
+caption {
+    display: none;
+    clear: both;
+}
+label {
+    margin: 0;
+}
+label {
+    font-weight: 300;
+}
+label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+#wrap footer a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: #999999;
+    text-decoration: none;
+}
+a,
+area,
+button,
+[role="button"],
+input,
+label,
+select,
+summary,
+textarea {
+    -ms-touch-action: manipulation;
+    /*  touch-action 속성을 통해 어떤 요소 내에서 브라우저가 처리할 터치 액션의 목록을 지정할 수 있습니다.
+        표준 터치 제스쳐로는 터치를 사용한 스크롤(panning)과 여러 손가락을 사용한 확대/축소(pinch zoom)가 존재합니다.
+        touch-action 속성의 값으로 auto 이외의 값을 줄 경우, 해당 속성에 명시해준 터치 액션만이 브라우저에 의해 처리됩니다. 
+        manipulation : 패닝 및 핀치 확대 / 축소 제스처를 활성화하지만 두 번 탭 하여 확대 / 축소하는 것과 같은 추가 비표준 제스처는 비활성화합니다. */
+    touch-action: manipulation;
+}
+a {
+    background-color: transparent;
+}
+a,
+button {
+    outline: none;
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--gray-700);
+}
+p,
+dt,
+dd {
+    margin: 0px;
+    padding: 0px;
+}
+input,
+button,
+select,
+textarea {
+    margin: 0;
+    line-height: inherit;
+    border-radius: 0;
+}
+input[type="checkbox"],
+input[type="radio"] {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+}
+input:not([type="checkbox"]):not([type="radio"]),
+button,
+textarea,
+select {
+    appearance: none;
+}
+[role="button"] {
+    /* 링크를 나타내는 포인터. 보통 한 쪽을 가리키는 손입니다. */
+    cursor: pointer;
+}
+li {
+    outline: none;
+}
+ul,
+ol,
+dl {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0;
+}
+ol,
+ul,
+dl {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 0px;
+}
+h5 {
+    font-size: 1.25rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    margin-bottom: 0.5rem;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+.main-button-next.swiper-button-disabled,
+.main-button-prev.swiper-button-disabled,
+.mainbanner-button-prev.swiper-button-disabled,
+.mainbanner-button-next.swiper-button-disabled {
+    display: none;
+}

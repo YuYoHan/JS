@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Design House</title>
+        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=bf433040c0909daa167935ae2c81d6ac"></script>
+        <link href="./css/common.css" rel="stylesheet" />
+        <link href="./css/main.css" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400;1,600&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!--header-->
+        <header>
+            <nav class="navBar">
+                <div class="navBar_logo">
+                    <a href="#"><h1>DESIGN</h1></a>
+                </div>
+                <ul class="navBar_menu">
+                    <li><a href="./main.html">Home</a></li>
+                    <li><a href="./gallery.html">Gallery</a></li>
+                    <li><a href="#">BUY</a></li>
+                    <li><a href="./fag.html">FAG</a></li>
+                    <li><a href="#">Bookings</a></li>
+                </ul>
+                <ul class="navBar_icon">
+                    <li><a href="#"><i class="fa-brands fa-instagram"></a></i></li>
+                    <li><a href="#"><i class="fa-brands fa-facebook"></a></i></li>
+                </ul>
+                <a href="#" class="navBar_toogleBtn">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
+            </nav>
+        </header>
+        <!--/header-->
+
+        <!--main-->
+        <main class="wrap">
+            <!--aside-->
+            <!-- <aside>
+                <div class="wrap2">
+                    <div class="top">
+                        <h1><span>포인트</span>가 &nbsp;&nbsp;도착했어요</h1>
+                        <p><img src="./img/img_01.png" alt="" /></p>
+                    </div>
+                    <div class="bottom">
+                        <h2>지금 광고를 시청하는<br />모든 분께 포인트를 드려요!</h2>
+                        <p><img src="./img/img_02.png" alt="" /></p>
+                        <a href="#">영상 시청하고 포인트 받기</a>
+                    </div>
+                </div>
+            </aside> -->
+            <!--/aside-->
+            <!--section01-->
+            <section id="mainBg">
+                <div class="left">
+                    <img src="./img/in4.jpg" alt=""/>
+                </div>
+                <div class="right">
+                    <img src="./img/in5.jpg" alt=""/>
+                    <div class="tbox">
+                        <p>DESIGN YOUR HOUSE</p>
+                        <h1>THE DESIGN SHOP</h1>
+                        <div class="line"></div>
+                    </div>
+                    <div class="tbox">
+                        <p>Call the Number</p>
+                        <h1>010-0000-0000</h1>
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </section>
+            <!--section01-->
+            <section id="section01">
+                <div class="left">
+                    <img src="./img/in1.webp" alt=""/>
+                    <div class="ibox">
+                        <iframe width="700" height="400" src="https://www.youtube.com/embed/1Y_81yIbX-s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="right">
+                    <img src="./img/in2.jpg" alt=""/>
+        
+                </div>
+            </section>
+            <!--/section01-->
+            
+            <!--section02-->
+            <section id="section02">
+                <img src="./img/in6.jfif"/>
+                <img src="./img/in7jfif.jfif"/>
+                <img src="./img/in8.jpg"/>
+            </section>
+            <!--/section02-->
+            <section id="section03">
+                <div class="left">
+                    <!--배경이미지가 나타날 자리-->
+                </div>
+                <div class="right">
+                    <div class="ibox">
+                        <iframe width="1065" height="500" 
+                            src="https://www.youtube.com/embed/Uo86JjbnZcs" 
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <form>
+                        <div class="center">
+                            <label>SIGN UP</label>
+                            <input type="email" placeholder="YOUR EMAIL ADDRESS" name="em"/>
+                            <button type="button">&#62;</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <div class="map">
+                <p><h2>위치정보</h2></p>
+                <div id="map" style="width:1060px;height:400px;"></div>
+            </div>    
+            </main>
+        <!--/main-->
+        <!--footer-->
+        <div class="footer_wrapper">
+            <div class="footerContainer">
+                <div class="footer_wapper footer_customerClass">
+                    <div class="footer_Footer">
+                        <div class="footer_container1">
+                            <div class="CustomerCenter_container">
+                                <h5 class="CustomerCenter_subject">
+                                    고객지원실 운영안내
+                                </h5>
+                                <p class="CustomerCenter_question">
+                                    <span
+                                        class="CustomerCenter_questionWord CustomerCenter_questionLine"
+                                        >연중무휴 09:00-18:00 (점심시간
+                                        12:00-13:00)</span
+                                    >
+                                    <br class="CustomerCenter_hide" />
+                                    <span
+                                        class="CustomerCenter_questionWord CustomerCenter_questionLine"
+                                        >주말/공휴일 포함, 한국시간 기준</span
+                                    >
+                                    <br class="CustomerCenter_hide" />
+                                    <span
+                                        class="CustomerCenter_questionWord CustomerCenter_questionLine"
+                                        >※ 항공권 환불/변경은 평일 09:00-17:00
+                                        접수 가능</span
+                                    >
+                                    <br class="CustomerCenter_hide" />
+                                    <span class="CustomerCenter_questionWord"
+                                        >유선상담 1670-8208</span
+                                    >
+                                </p>
+                                <button
+                                    type="button"
+                                    class="CustomerCenter_chat"
+                                >
+                                    1:1 채팅상담
+                                </button>
+                            </div>
+                            <div class="siteMapAboveTablet_container">
+                                <div class="siteMapAboveTablet_group">
+                                    <h4 class="siteMapAboveTablet_groupTitle">
+                                        소개
+                                    </h4>
+                                    <ul
+                                        class="siteMapAboveTablet_itemContainer"
+                                    >
+                                        <li
+                                            class="siteMapMenuItem_itemBox siteMapMenuItem_web"
+                                        >
+                                            <a
+                                                class="Link_link Link_medium Button_button Button_link Button_medium siteMapMenuItem_itemLink"
+                                                href="#"
+                                                data-turbolinks="false"
+                                                >회사소개</a
+                                            >
+                                        </li>
+                                        <li
+                                            class="siteMapMenuItem_itemBox siteMapMenuItem_web"
+                                        >
+                                            <a
+                                                class="Link_link Link_medium Button_button Button_link Button_medium siteMapMenuItem_itemLink"
+                                                href="#"
+                                                data-turbolinks="false"
+                                                >채용</a
+                                            >
+                                        </li>
+                                        <li
+                                            class="siteMapMenuItem_itemBox siteMapMenuItem_web"
+                                        >
+                                            <a
+                                                class="Link_link Link_medium Button_button Button_link Button_medium siteMapMenuItem_itemLink"
+                                                href="#"
+                                                data-turbolinks="false"
+                                                >공고</a
+                                            >
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="siteMapAboveTablet_group">
+                                    <h4 class="siteMapAboveTablet_groupTitle">
+                                        파트너
+                                    </h4>
+                                    <ul
+                                        class="siteMapAboveTablet_itemContainer"
+                                    >
+                                        <li
+                                            class="siteMapMenuItem_itemBox siteMapMenuItem_web"
+                                        >
+                                            <a
+                                                class="Link_link Link_medium Button_button Button_link Button_medium siteMapMenuItem_itemLink"
+                                                href="#"
+                                                data-turbolinks="false"
+                                                >파트너 등록하기</a
+                                            >
+                                        </li>
+                                        <li
+                                            class="siteMapMenuItem_itemBox siteMapMenuItem_web"
+                                        >
+                                            <a
+                                                class="Link_link Link_medium Button_button Button_link Button_medium siteMapMenuItem_itemLink"
+                                                href="#"
+                                                data-turbolinks="false"
+                                                >Affiliate 프로그램</a
+                                            >
+                                        </li>
+                                        <li
+                                            class="siteMapMenuItem_itemBox siteMapMenuItem_web"
+                                        >
+                                            <a
+                                                class="Link_link Link_medium Button_button Button_link Button_medium siteMapMenuItem_itemLink"
+                                                href="#"
+                                                data-turbolinks="false"
+                                                >리얼 파트너</a
+                                            >
+                                        </li>
+                                        <li
+                                            class="siteMapMenuItem_itemBox siteMapMenuItem_web"
+                                        >
+                                            <a
+                                                class="Link_link Link_medium Button_button Button_link Button_medium siteMapMenuItem_itemLink"
+                                                href="#"
+                                                data-turbolinks="false"
+                                                >파트너 블로그</a
+                                            >
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="siteMapAboveTablet_group">
+                                    <h4 class="siteMapAboveTablet_groupTitle">
+                                        지원
+                                    </h4>
+                                    <ul
+                                        class="siteMapAboveTablet_itemContainer"
+                                    >
+                                        <li
+                                            class="siteMapMenuItem_itemBox siteMapMenuItem_web"
+                                        >
+                                            <a
+                                                class="Link_link Link_medium Button_button Button_link Button_medium siteMapMenuItem_itemLink"
+                                                href="#"
+                                                data-turbolinks="false"
+                                                >자주 묻는 질문</a
+                                            >
+                                        </li>
+                                        <li
+                                            class="siteMapMenuItem_itemBox siteMapMenuItem_web"
+                                        >
+                                            <a
+                                                class="Link_link Link_medium Button_button Button_link Button_medium siteMapMenuItem_itemLink"
+                                                href="#"
+                                                data-turbolinks="false"
+                                                >최저가 보장제</a
+                                            >
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="siteMapBelowTablet_container">
+                                <div class="siteMapBelowTablet_group"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footerBottom">
+                        <div class="footerBottomBox_top">
+                            <div class="footer_policy">
+                                <div class="footer_policy_item">
+                                    <a
+                                        class="footer_policy_list1"
+                                        href="#"
+                                        >이용약관</a
+                                    >
+                                </div>
+                                <div class="footer_policy_item">
+                                    <a
+                                        class="footer_policy_list2"
+                                        href="#"
+                                        >개인정보 처리방침</a
+                                    >
+                                </div>
+                                <div class="footer_policy_item">
+                                    <a
+                                        class="footer_policy_list3"
+                                        href="#"
+                                        >취소 및 환불 정책</a
+                                    >
+                                </div>
+                            </div>
+                            <div class="footer_outlink">
+                                <div class="snslist">
+                                    <div class="snslist_item">
+                                        <a
+                                            class="snslist_link"
+                                            href="#"
+                                        >
+                                            <img
+                                                class="snslist_linkIcon"
+                                                src="https://dffoxz5he03rp.cloudfront.net/icons/ic_facebook_20x20_gray_400.svg"
+                                            />
+                                        </a>
+                                    </div>
+                                    <div class="snslist_item">
+                                        <a
+                                            class="snslist_link"
+                                            href="#"
+                                        >
+                                            <img
+                                                class="snslist_linkIcon"
+                                                src="https://dffoxz5he03rp.cloudfront.net/icons/ic_naver_20x20_gray_400.svg"
+                                            />
+                                        </a>
+                                    </div>
+                                    <div class="snslist_item">
+                                        <a
+                                            class="snslist_link"
+                                            href="#"
+                                        >
+                                            <img
+                                                class="snslist_linkIcon"
+                                                src="https://dffoxz5he03rp.cloudfront.net/icons/ic_instagram_20x20_gray_400.svg"
+                                            />
+                                        </a>
+                                    </div>
+                                    <div class="snslist_item">
+                                        <a
+                                            class="snslist_link"
+                                            href="#"
+                                        >
+                                            <img
+                                                class="snslist_linkIcon"
+                                                src="https://dffoxz5he03rp.cloudfront.net/icons/ic_youtube_20x20_gray_400.svg"
+                                            />
+                                        </a>
+                                    </div>
+                                </div>
+                                <span class="outlink_line"></span>
+                                <div class="appstorelist">
+                                    <div class="appstorelist_linkItem">
+                                        <a
+                                            class="appstorelist_link"
+                                            href="#"
+                                        >
+                                            <img
+                                                class="appstorelist_img"
+                                                src="https://dffoxz5he03rp.cloudfront.net/icons/ic_appstore_20x20_gray_400.svg"
+                                            />
+                                        </a>
+                                    </div>
+                                    <div class="appstorelist_linkItem">
+                                        <a
+                                            class="appstorelist_link"
+                                            href="#"
+                                        >
+                                            <img
+                                                class="appstorelist_img"
+                                                src="https://dffoxz5he03rp.cloudfront.net/icons/ic_googleplay_20x20_gray_400.svg"
+                                            />
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="footer_language">
+                                <div class="language_container">
+                                    <button class="language_btn">
+                                        <img
+                                            class="language_img"
+                                            src="https://dffoxz5he03rp.cloudfront.net/icons/ic-md-globe.svg"
+                                        />
+                                        <span class="select_label">한국어</span>
+                                        <img
+                                            class="language_img"
+                                            src="https://dffoxz5he03rp.cloudfront.net/icons/ic_arrow_down_12x12_gray_300.svg"
+                                        />
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footerBottomBox_bottom">
+                            <div class="copyright">
+                                <p class="copyright-text">
+                                    상호명 (주)DESIGN HOUSE | 대표 유요한 |
+                                    개인정보보호책임자 김민지 | 사업자등록번호
+                                    209-81-55339
+                                    <a
+                                        href="#"
+                                        >사업자정보확인</a
+                                    >
+                                    | 통신판매업신고번호 2019-서울서초-0260<br
+                                        class="hide-on-tablet"
+                                    />
+                                    <span class="show-on-tablet"> | </span>
+                                    주소 서울특별시 서초구 강남대로 311,
+                                    드림플러스 강남 (서초동,
+                                    한화생명보험빌딩) | 이메일
+                                    hmina1655@gmail.com | 마케팅/제휴 문의
+                                    hmina1655@gmail.com<br /><br />
+                                    자사는 서울특별시관광협회 공제영업보증보험에
+                                    가입되어 있습니다. DESIGN HOUSE는
+                                    통신판매중개자이며 통신판매의 당사자가
+                                    아닙니다. 따라서 상품·거래정보 및 거래에
+                                    대하여 책임을 지지않습니다.
+                                </p>
+                            </div>
+                            <div class="ISMS-container">
+                                <button class="ISMS-button">
+                                    <img
+                                        class="ISMS-img"
+                                        src="https://dffoxz5he03rp.cloudfront.net/etc/img-logo-isms@2x.png"
+                                    />
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+        <!--/footer-->
+    </body>
+    </html>
+    <script src="./js/main.js"></script>
+    <script
+    src="https://kit.fontawesome.com/48b9d02e55.js"
+    crossorigin="anonymous"
+    ></script>
+   
+</body>
+</html>

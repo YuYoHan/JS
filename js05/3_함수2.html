@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>함수2</title>
+    </head>
+    <body>
+        <script>
+            /*
+                자판기라는 함수를 정의
+                자판기 함수는 처음에 실행되었을 때 '자판기가 가동되었습니다' ← 콘솔
+
+                매개변수로는 coin을 전달 받습니다.
+                coin이 300, 500, 1000일 때 각각 솔의눈, 비타500, 마운틴 듀를 ← 콘솔
+
+                리턴 값은 잔 돈, 0이면 0을 리턴 받는다.
+                코인이 300보다 아래면 '금액을 잘못 투입하셨습니다.' ← 콘솔
+            */
+            let return_coin;
+
+            function 자판기(coin, product) {
+                console.log("자판기가 가동되었습니다.");
+                if (product === "솔의눈") {
+                    if (coin >= 300) {
+                        console.log("솔의눈");
+                        return_coin = coin - 300;
+                        console.log(`반환금액은 ${return_coin}원 입니다.`);
+                        return return_coin;
+                    }
+                    if (coin < 300) {
+                        console.log("금액을 잘못 투입하셨습니다.");
+                    }
+                } else if (product === "비타500") {
+                    if (coin >= 500) {
+                        console.log("비타500");
+                        return_coin = coin - 500;
+                        console.log(`반환금액은 ${return_coin}원 입니다.`);
+                        return return_coin;
+                    } else if (coin < 500) {
+                        console.log("금액을 잘못 투입하셨습니다.");
+                    }
+                } else if (product === "마운틴 듀") {
+                    if (coin >= 1000) {
+                        console.log("마운틴 듀");
+                        return_coin = coin - 1000;
+                        console.log(`반환금액은 ${return_coin}원 입니다.`);
+                        return return_coin;
+                    } else if (coin < 1000) {
+                        console.log("금액을 잘못 투입하셨습니다.");
+                    }
+                } else {
+                    console.log("없는 메뉴입니다.");
+                }
+            }
+
+            자판기(1000, "마운틴 듀");
+        </script>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+/*reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+
+body {
+    font-family: "NanumSquare", snas-serif !important;
+    background: #22212e;
+}
+.wrap {
+    width: 1000px;
+    margin: 150px auto;
+    text-align: center;
+    color: #fff;
+}
+.wrap .title {
+    background: url();
+}
