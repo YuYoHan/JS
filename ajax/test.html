@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            /*
+                promise는 fetch를 사용했을때 실행결과에 대한 상태를 반환해주는 약속된 객체
+                promise에서는 3가지 용어를 알아야 한다.
+                1. pending : 수행중
+                2. fullfilled : 성공적인 완료
+                3. rejected : 실패했다.
+
+                fetch에서 ht.txt를 읽어오는데 현재는 금방 읽어오지만 만약에 1시간이 걸린다고하면
+                오래걸리기 때문에 fetch에서는 한가지 약속된 함수를 제공한다.
+                .then이다. .then안에다 실행결과를 받을 수 있는 함수를 적어주면 
+                실행이 완료되는데로 콜백함수라고 부르는 이안에 실행결과를 보내준다는 것이다.
+
+            */
+            let promise = fetch("hi.txt").then(function (response) {
+                response.text().then(function (text) {
+                    alert(text);
+                });
+            });
+        </script>
+    </body>
+</html>

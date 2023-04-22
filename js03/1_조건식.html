@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>조건식</title>
+    </head>
+    <body>
+        <script>
+            const b1 = true;
+            const b2 = false;
+
+            console.log(b1); // tue
+            console.log(!b2); // false → true
+
+            const num1 = 3;
+            const str1 = "3";
+            const num2 = 5;
+            const str2 = "5";
+            let result;
+
+            // 타입과 무관하게 값이 같은지
+            result = num1 = str1;
+            console.log("3", result); // true
+
+            // 타입과 값이 모두 같은지
+            result = num1 === str1;
+            console.log("4", result); // false
+
+            // 타입과 무관하게 값이 같지 않은지
+            result = num1 != str1;
+            console.log("5", result); // false
+
+            // 타입과 값이 모두 같지 않아야 (둘 중 하나라도)
+            result = num1 !== str1;
+            console.log("6", result); // true
+        </script>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>promise</title>
+    </head>
+    <body>
+        <script>
+            let promise = new Promise((resolve, reject) => {
+                setTimeout(() => reject(new Error("에러발생!")), 1000);
+            });
+
+            promise.then(
+                // 실행되지 않음
+                (result) => alert(result),
+                // 1초 후 "Error: 에러발생!"을 출력
+                (error) => alert(error)
+            );
+        </script>
+    </body>
+</html>

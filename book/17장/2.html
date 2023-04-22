@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            function Cricle(radius) {
+                this.radius = radius;
+                this.getDiameter = function () {
+                    return 2 * this.radius;
+                };
+            }
+
+            const circle = Cricle(5);
+            console.log(circle); // undefined
+        </script>
+    </body>
+</html>

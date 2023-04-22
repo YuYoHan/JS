@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let name = ["김민성", "김우성", "최민지"];
+            let age = [32, 29, 19];
+            let kor = [94, 98, 88];
+            let eng = [20, 84, 100];
+            let coding = [30, 70, 97];
+            let avg = 0;
+
+            for (let i = 0; i < 3; i++) {
+                if (0) {
+                    avg = (kor[0] + eng[0] + coding[0]) / 3;
+                    console.log(
+                        `이름은 ${name[0]}이며 나이는 ${age[0]}이고 평균점수는 ${avg}입니다.`
+                    );
+                }
+                if (1) {
+                    avg = (kor[1] + eng[1] + coding[1]) / 3;
+                    console.log(
+                        `이름은 ${name[1]}이며 나이는 ${age[1]}이고 평균점수는 ${avg}입니다.`
+                    );
+                }
+                if (2) {
+                    avg = (kor[2] + eng[2] + coding[2]) / 3;
+                    console.log(
+                        `이름은 ${name[2]}이며 나이는 ${age[2]}이고 평균점수는 ${avg}입니다.`
+                    );
+                }
+            }
+
+            for (let i in coding) {
+                console.log(i);
+                console.log(coding[i]);
+            }
+
+            for (let i of coding) {
+                console.log("3: " + i);
+            }
+        </script>
+    </body>
+</html>

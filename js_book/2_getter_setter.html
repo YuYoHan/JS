@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // 변수는 거의 const로 해주는것이 좋다.
+            const person = {
+                // 데이터 프로퍼티
+                firstName: "Ungmo",
+                lastName: "Lee",
+
+                // fullName은 접근자 함수로 구성된 접근자 프로퍼티이다.
+                // getter 함수
+                get fullName() {
+                    return `${this.firstName} ${this.lastName}`;
+                },
+
+                // setter 함수
+                set fullName(name) {
+                    // 배열 디스트럭처링 할당
+                    [this.firstName, this.lastName] = name.split(" ");
+                },
+            };
+            // 데이터 프로퍼티를 통한 프로퍼티 값의 참조
+            console.log(person.firstName + " " + person.lastName);
+
+            // 접근자 프로퍼티를 통한 프로퍼티 값의 저장
+            // 접근자 프로퍼티 fullName에 값을 저장하면 setter 함수가 호출된다.
+            person.fullName = "Heegun Lee";
+            console.log(person);
+
+            // 접근자 프로퍼티 fullName에 접근하면 getter 함수가 호출된다.
+            console.log(person.fullName);
+
+            // 데이터 프로퍼티는 [[Value]], [[Writable]], [[Enumerable]], [[Configurable]]
+            // 프로퍼티 어트리뷰트를 갖는다.
+            let descriptor = Object.getOwnPropertyDescriptor(
+                person,
+                "firstName"
+            );
+            console.log(descriptor);
+        </script>
+    </body>
+</html>

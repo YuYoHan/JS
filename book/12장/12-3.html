@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            /*  funtion 생성자 함수로 함수를 생성하는 방식은 일반적이지 않으며 바람직하지도 않는다.
+            funtion 생성자 함수로 생성한 함수는 클로저를 생성하지 않는 등, 함수 선언문이나 함수 표현식으로
+            생성한 함수와 다르게 움직인다*/
+
+            let add = (function () {
+                let a = 10;
+                return function (x, y) {
+                    return x + y + a;
+                };
+            })();
+
+            console.log(add(3, 4)); // 17
+
+            let add2 = (function () {
+                let a = 10;
+                return new Function("x", "y", "return x + y +a;");
+            })();
+
+            console.log(add2(3, 5)); // ReferenceError
+        </script>
+    </body>
+</html>

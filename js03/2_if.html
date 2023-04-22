@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>if문</title>
+    </head>
+    <body>
+        <script>
+            let age = 14;
+
+            if (age >= 20) {
+                alert("성인인증 완료");
+            } else if (age >= 13) {
+                alert("청소년 입니다");
+            } else {
+                alert("어린이는 보호자와 함께 이용해주세요");
+            }
+
+            // early return if → 함수안에서 사용해야 한다.
+            // if (age >= 13) {
+            //     return alert("청소년입니다.");
+            // }
+
+            age = null;
+            // 0.은 false
+            age = 0;
+            age = parseInt(0);
+
+            if (age) {
+                console.log("사용자 정보가 확인 되었습니다.");
+            } else {
+                console.log("사용자 정보가 인증되지 않았습니다.");
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>중첩 함수</title>
+    </head>
+    <body>
+        <script>
+            /*
+            함수 내부에 정의된 함수를 중첩 함수 또는 내부 함수라고 한다.
+            중첩 함수를 포함하는 함수는 외부 함수라고 한다. 중첩 함수는 외부 함수 내부에서만 호출 할 수 있다.
+            일반적으로 중첩 함수는 자신을 포함하는 외부 함수를 돕는 헬퍼 함수의 역할을 한다. 
+        */
+
+            function outter() {
+                let x = 1;
+
+                // 중첩함수
+                function inner() {
+                    let y = 2;
+                    // 외부 함수의 변수를 참조 할 수 있다.
+                    console.log(x + y); // 3
+                }
+                inner();
+            }
+            outter();
+        </script>
+    </body>
+</html>

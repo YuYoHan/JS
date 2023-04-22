@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            var x = 1;
+
+            if (true) {
+                // x는 전역변수이다. 이미 선언된 전역변수 x가 있으므로 x변수는 중복 선언된다.
+                // 이는 의도치 않게 변수값이 변경되는 부작용을 발생시킨다.
+                var x = 10;
+            }
+            console.log(x); // 10
+        </script>
+    </body>
+</html>

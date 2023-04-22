@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // state : pending → fulfilled or rejected
+
+            // 1. producer
+            const promise = new Promise((resolve, reject) => {
+                // doing some heavy work(network, read fileds)
+                console.log("doing somthing...");
+                setTimeout(() => {
+                    if (true) {
+                        resolve("zxzz45");
+                    } else {
+                        reject(new Error("wrong Id"));
+                    }
+                }, 2000);
+            });
+
+            // promise에서 정상적으로 실행이 된 값을 then으로 받아온다.
+            promise
+                .then((value) => {
+                    console.log(value);
+                })
+                .catch((error) => {
+                    console.log(error);
+                })
+                .finally(() => {
+                    console.log("finally");
+                });
+
+            const fetchNumber = new Promise((resolve, reject) => {
+                setTimeout(() => resolve(1), 1000);
+            });
+
+            fetchNumber
+                .then((num) => num * 2)
+                .then((num) => num * 3)
+                .then((num) => {
+                    return new Promise((resolve, reject) => {
+                        setTimeout(() => resolve(num - 1), 1000);
+                    });
+                });
+        </script>
+    </body>
+</html>

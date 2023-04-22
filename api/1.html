@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // 다음 맵에 있는 마커 클릭 이벤트
+            daum.maps.event.addListener(marker, "click", function () {
+                $.ajax({
+                    url: "callDetail.do",
+                    type: "get",
+                    // contentId, contentTypeId 서버로 전송
+                    data: {
+                        contentId: contentId,
+                        contentTypeId: contentTypeId,
+                    },
+                    dataType: "json",
+                    success: function (data) {
+                        // 이 경로 내부에 데이터가 들어 있음
+                        let myItem = data.response.body.items.item;
+                        let outPut = "";
+                        // API 활용 메뉴얼 보면 Response 할 수 있는
+                        // 데이터들이 있음
+                        // 거기서 골라 쓰면됨
+                        outPut += "<h4>" + myItem.treatmenu + "</h4>";
+                        outPut += "<h4>" + myItem.opentimefood + "</h4>";
+                        outPut += "<h4>" + myItem.reservationfood + "</h4>";
+
+                        $("#window").html(outPut);
+                    },
+                    error: function (XMLHttpRequest, textStatus, errorThrown) {
+                        alert("Status: " + textStatus);
+                        alert("Error: " + errorThrown);
+                    },
+                });
+            });
+        </script>
+    </body>
+</html>
