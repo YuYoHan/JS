@@ -7,7 +7,40 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>회원가입</h2>
-    <p>아이디 :  </p>
+<h2>회원가입</h2>
+<p>아이디 : <input type="text" name="user_id" /></p>
+<p>비밀번호 : <input type="text" name="user_pw"/></p>
+<p>닉네임 : <input type="text" name="user_nick"/></p>
+<p><input type="checkbox" value="1" name="user_flag"/>수신 동의</p>
+<button onclick="onSignUpHandler()" id="sign_up_btn">회원가입</button>
+
+<script>
+    function onSignUpHandler() {
+        const userId = document.getElementsByName("user_id")[0];
+        const userPw = document.getElementsByName("user_pw")[0];
+        const userNick = document.getElementsByName("user_nick")[0];
+        const userFlag = document.getElementsByName("user_flag")[0];
+
+
+        /*
+        *   form 태그의 action와 method를 활용하면
+        *   name의 이름으로 백엔드에게 자동으로 데이터를 전송
+        *   form 태그 안에서는 보통 name 을 활용하지만
+        *   input 타입을 가지고 올 때는 id 는 class 든 상관 없음
+        * */
+
+        const data = {
+            user_id : userId.value,
+            user_pw : userPw.value,
+            user_nick : userNick.value,
+        };
+
+        console.log(data);
+        if(userFlag.checked === true) {
+            data["user_flag"] = userFlag.value;
+        }
+    }
+
+</script>
 </body>
 </html>
