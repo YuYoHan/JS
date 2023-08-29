@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>문서 객체 모델</h2>
+<ul id="menu">
+  <li class="menu_item">1</li>
+  <li class="menu_item">2</li>
+  <li class="menu_item">3</li>
+  <li class="menu_item">4</li>
+</ul>
+
+<script>
+  const MENU_LIST = document.querySelector("#menu");
+  const MENU_LIST2 = document.querySelectorAll("#menu > li");
+
+  console.log(MENU_LIST)
+  console.log(MENU_LIST2)
+</script>
+</body>
+</html>
