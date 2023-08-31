@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <thead>
+    <th>번호</th>
+    <th>제목</th>
+    <th>조회수</th>
+    <th>좋아요</th>
+    </thead>
+    <tbody id="post_content">
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+    </tbody>
+</table>
+<script>
+    window.onload = function () {
+        const post = [
+            {
+                id: 1,
+                title: "파스타",
+                hit: 202,
+                like: 200,
+            },
+            {
+                id: 2,
+                title: "족발",
+                hit: 12312,
+                like: 223,
+            },
+            {
+                id: 3,
+                title: "엽떡",
+                hit: 2123,
+                like: 2045,
+            },
+            {
+                id: 4,
+                title: "스테이크",
+                hit: 204352,
+                like: 2500,
+            },
+        ];
+
+        const content = document.getElementById("post_content");
+        console.log(content);
+
+        content.append(`<div>안녕하세요</div>`);
+    }
+</script>
+</body>
+</html>
