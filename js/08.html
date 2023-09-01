@@ -65,7 +65,22 @@
         const content = document.getElementById("post_content");
         console.log(content);
 
-        content.append(`<div>안녕하세요</div>`);
+        const row = document.createElement("tr");
+        row.innerHTML = `<div>안녕하세요</div>`
+        // row 를 content 에게 추가
+        content.append(row);
+
+        for (let i =0; i < post.length; i++) {
+            console.log(post[i]);
+            const row = document.createElement("tr");
+            row.innerHTML =
+                `<td>${post[i].id}</td>`;
+                `<td>${post[i].title}</td>`;
+                `<td>${post[i].hit}</td>`;
+                `<td>${post[i].like}</td>`;
+            row.append(row);
+        }
+
     }
 </script>
 </body>
