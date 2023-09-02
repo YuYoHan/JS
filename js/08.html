@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        .on{
+            background: red;
+        }
+    </style>
 </head>
 <body>
 <table>
@@ -34,7 +39,16 @@
     </tbody>
 </table>
 <script>
+    function pageNavige(e) {
+        console.log()
+    }
+    function onInfoNavige() {}
+
+
     window.onload = function () {
+        const param = new URLSearchParams(location.search);
+        const pageParam = param.get("page");
+
         const post = [
             {
                 id: 1,
